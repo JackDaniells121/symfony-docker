@@ -1,0 +1,28 @@
+GET http://localhost/api/product/list
+Accept: application/json
+
+###
+POST http://localhost/api/product/new
+Content-Type: application/json
+
+{
+    "name" : "creditAssist2",
+    "quantity" : 22,
+    "priceNet" : 12999,
+    "priceGross" : 13999,
+    "vatRate" : 230
+}
+
+###
+
+### below request dont work proper from phpStorm, use Insomnia or Postman instead
+PUT http://localhost/api/product/update/25
+Content-Type: application/json
+
+{
+    "name": "zero"
+}
+
+###
+
+

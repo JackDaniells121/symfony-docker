@@ -1,0 +1,23 @@
+<h1>List of products!</h1>
+
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Price Net</th>
+    <th>Price Gross</th>
+    <th>VAT rate</th>
+    </thead>
+    <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.quantity  }}</td>
+                <td>{{ product.priceNet / 100 }}</td>
+                <td>{{ product.priceGross / 100 }}</td>
+                <td>{{ product.vatRate / 10 }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
