@@ -14,7 +14,7 @@ Products REST API:
 - DELETE /api/product/delete/{id} 
 - GET /api/product/show/{id}
 
-  (view all products in table)[https://localhost/api/product/list]
+  [view all products in table](https://localhost/api/product/list)
 
 ## Getting Started
 
