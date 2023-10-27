@@ -24,7 +24,6 @@ Products REST API:
        composer require symfony/twig-bundle 
        composer require --dev orm-fixtures
 
-       php bin/console doctrine:database:create 
        php bin/console doctrine:migrations:migrate 
        php bin/console doctrine:fixtures:load
 
