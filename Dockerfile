@@ -99,3 +99,10 @@ RUN set -eux; \
 	composer dump-env prod; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync;
+
+RUN composer require symfony/orm-pack
+RUN composer require symfony/twig-bundle
+RUN php bin/console doctrine:database:create
+RUN composer require --dev orm-fixtures
+RUN php bin/console doctrine:migrations:migrate
+RUN php bin/console doctrine:fixtures:load

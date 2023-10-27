@@ -14,12 +14,7 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 		rm -Rf tmp/
 
 		composer require "php:>=$PHP_VERSION" runtime/frankenphp-symfony
-		composer require symfony/orm-pack
-		composer require --dev symfony/maker-bundle
-		composer require symfony/twig-bundle
-		composer require --dev orm-fixtures
 		composer config --json extra.symfony.docker 'true'
-		php bin/console doctrine:fixtures:load
 
 		if grep -q ^DATABASE_URL= .env; then
 			echo "To finish the installation please press Ctrl+C to stop Docker Compose and run: docker compose up --build -d --wait"
