@@ -17,7 +17,16 @@ Products REST API:
 ## Getting Started
 
 1. Run `docker compose build --no-cache` to build fresh images
-2. Run `docker compose up --pull -d --wait` to start the project
+2. Run `docker compose up -d --wait` to start the project 
+3. Run below commands in terminal in project or php container:
+
+       composer require symfony/orm-pack 
+       composer require symfony/twig-bundle 
+       composer require --dev orm-fixtures
+
+       php bin/console doctrine:database:create 
+       php bin/console doctrine:migrations:migrate 
+       php bin/console doctrine:fixtures:load
 
 
 or `XDEBUG_MODE=debug docker compose up -d`
