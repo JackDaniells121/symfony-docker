@@ -20,7 +20,7 @@ Products REST API:
 
 1. Run `docker compose build --no-cache` to build fresh images
 2. Run `docker compose up -d --wait` to start the project 
-3. Run below commands ~~in terminal in project or~~ php container:
+3. Run below commands in ~~terminal in project or~~ php container:
 
        composer require symfony/orm-pack 
        composer require symfony/twig-bundle 
